@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.hero.gossipvideo"
+        versionCode 2
+        versionName "1.1.0"
+    }
+
+    //签名
+    signingConfigs {
+        releaseConfig {
+            storeFile file("android.keystore")
+            storePassword "xxxxx"
+            keyAlias "android.keystore"
+            keyPassword "xxxxx"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters 'x86', 'armeabi'
+            }
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            ndk {
+                abiFilters 'x86', 'armeabi'
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:recyclerview-v7:+'
+    compile 'com.android.support:cardview-v7:+'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.ltc.lib:AndroidLib:1.0.8'
+    compile 'org.third.widget:thirdwidget:1.2'
+    compile 'com.um.update:update:1.0.3'
+    compile 'io.vov.vitamio:vitamio:5.0.1'
+    compile('com.facebook.fresco:fresco:0.7.0+') {
+        exclude group: 'com.android.support'
+        exclude group: 'com.nineoldandroids'
+    }
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/GDTUnionSDK.4.8.514.min.jar')
+}
+
+

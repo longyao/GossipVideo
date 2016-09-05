@@ -1,0 +1,28 @@
+[
+    {
+        "outputFile": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/values-v19/values-v19.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 192
+                },
+                "from": {
+                    "file": "/Users/longtc/workaraAndroid/GossipVideo/app/src/main/res/values-v19/styles.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 97,
+                        "endLine": 6,
+                        "endColumn": 12,
+                        "endOffset": 236
+                    }
+                }
+            }
+        ]
+    }
+]

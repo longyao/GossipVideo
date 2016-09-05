@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pb="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/container_toolbar"/>
+
+    <org.third.widget.roundcornerprogressbar.RoundCornerProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:id="@+id/v_progress_bar"
+        pb:rcBackgroundPadding="0dp"
+        pb:rcBackgroundRadius="0dp"
+        pb:rcBackgroundColor="@color/gray"
+        pb:rcProgressColor="@color/colorAccent"
+        pb:rcProgress="00"
+        pb:rcMax="100"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/v_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/v_ad"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:id="@+id/v_view"
+            android:background="@color/white"/>
+    </RelativeLayout>
+
+</LinearLayout>

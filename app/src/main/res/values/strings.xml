@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">娱乐看看</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="app_label">娱乐八卦</string>
+
+    <string name="video_watch_count">播放%1$s次</string>
+    <string name="loading_more">正在加载更多...</string>
+    
+    <string name="nv_download">我的下载</string>
+    <string name="nv_favorite">我的收藏</string>
+    <string name="nv_news_history">阅读历史</string>
+    <string name="nv_video_history">观看历史</string>
+    <string name="nv_apps_recommend">更多推荐</string>
+    <string name="nv_about">关于我们</string>
+
+    <string name="history_tips">呃！阅读历史是空的。</string>
+    <string name="video_history_tips">呃！播放历史是空的。</string>
+    <string name="video_download_tips">呃！下载列表是空的，看到喜欢的就下载下来吧</string>
+
+    <string name="favorite_tips">呃！收藏是空的，看到喜欢的就收藏起来吧。</string>
+    <string name="favorite_add">我要收藏起来</string>
+    <string name="favorite_exists">我已已收藏</string>
+    <string name="favorite_suc">已收藏成功</string>
+    <string name="favorite_cancel">已取消收藏</string>
+
+    <string name="app_about">
+        娱乐看看聚合了娱乐视频和娱乐资讯于一体，带来实时的明星娱乐动向。看娱乐圈深夜爆料，花边新闻，娱乐八卦尽在娱乐看看。
+    </string>
+
+</resources>
