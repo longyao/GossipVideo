@@ -1,10 +1,7 @@
 package com.hero.gossipvideo.ui.fragment;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,7 +13,6 @@ import android.widget.TextView;
 import com.hero.gossipvideo.R;
 import com.hero.gossipvideo.api.ApiManager;
 import com.hero.gossipvideo.content.DiscoverContent;
-import com.hero.gossipvideo.ui.adapter.DiscoversAdapter;
 import com.hero.gossipvideo.ui.adapter.SpareVideosAdapter;
 import com.hero.gossipvideo.ui.view.DividerItemDecoration;
 import com.ltc.lib.net.api.HttpResult;

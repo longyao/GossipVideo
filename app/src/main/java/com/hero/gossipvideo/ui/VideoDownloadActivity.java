@@ -25,7 +25,6 @@ import java.util.List;
  */
 public class VideoDownloadActivity extends BaseActivity {
 
-    private Toolbar mToolbar;
     private TextView mTipsTv;
     private RecyclerView mRecyclerView;
     private DownloadVideoAdapter mVideoAdapter;
@@ -54,7 +53,7 @@ public class VideoDownloadActivity extends BaseActivity {
     }
 
     private void initView() {
-        mToolbar = (Toolbar) findViewById(R.id.v_toolbar);
+        final Toolbar mToolbar = (Toolbar) findViewById(R.id.v_toolbar);
         mToolbar.setTitle(R.string.nv_download);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -66,7 +65,7 @@ public class VideoDownloadActivity extends BaseActivity {
     }
 
     private void initData() {
-        List<DownloadVideo> ds =  DownloadVideoDao.getInstance().getAllOrderBy("updateTime", false);
+        final List<DownloadVideo> ds =  DownloadVideoDao.getInstance().getAllOrderBy("updateTime", false);
         if (Utils.isEmpty(ds)) {
             mTipsTv.setVisibility(View.VISIBLE);
         } else {

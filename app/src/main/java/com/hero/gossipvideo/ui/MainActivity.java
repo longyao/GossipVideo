@@ -32,7 +32,6 @@ import com.hero.gossipvideo.utils.DateUtil;
  */
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Toolbar mToolbar;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
 
@@ -60,7 +59,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     private void initView() {
 
-        mToolbar = (Toolbar) findViewById(R.id.v_toolbar);
+        final Toolbar mToolbar = (Toolbar) findViewById(R.id.v_toolbar);
         mToolbar.setTitle(R.string.app_name);
         setSupportActionBar(mToolbar);
 
@@ -95,7 +94,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         }
     }
 
-    public static class MainPagerAdapter extends FragmentPagerAdapter {
+    private static class MainPagerAdapter extends FragmentPagerAdapter {
 
         public MainPagerAdapter(FragmentManager fm) {
             super(fm);

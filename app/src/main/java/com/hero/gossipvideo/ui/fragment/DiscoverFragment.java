@@ -1,10 +1,7 @@
 package com.hero.gossipvideo.ui.fragment;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,9 +13,7 @@ import android.widget.TextView;
 import com.hero.gossipvideo.R;
 import com.hero.gossipvideo.api.ApiManager;
 import com.hero.gossipvideo.content.DiscoverContent;
-import com.hero.gossipvideo.content.NewsContent;
 import com.hero.gossipvideo.ui.adapter.DiscoversAdapter;
-import com.hero.gossipvideo.ui.adapter.NewsAdapter;
 import com.hero.gossipvideo.ui.view.DividerItemDecoration;
 import com.ltc.lib.net.api.HttpResult;
 import com.ltc.lib.utils.JsonUtil;
@@ -136,7 +131,7 @@ public class DiscoverFragment extends BaseFragment implements SwipeRefreshLayout
 
             boolean isEmpty = true;
             if (result != null && result.isSuccess()) {
-                DiscoverContent content = JsonUtil.fromJson(result.data, DiscoverContent.class);
+                final DiscoverContent content = JsonUtil.fromJson(result.data, DiscoverContent.class);
                 if (content != null && content.data != null) {
                     mTotalItems = content.data.totalItems;
                     if (mType == REQ_FIRST || mType == REQ_REFRESH) {

@@ -1,17 +1,13 @@
 package com.hero.gossipvideo.ui.fragment;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hero.gossipvideo.R;
@@ -25,7 +21,6 @@ import com.ltc.lib.net.api.HttpResult;
 import com.ltc.lib.utils.JsonUtil;
 import com.ltc.lib.utils.Utils;
 
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -148,7 +143,7 @@ public class VideosFragment extends BaseFragment implements SwipeRefreshLayout.O
             if (result != null && result.isSuccess()) {
                 VideoContent content = JsonUtil.fromJson(result.data, VideoContent.class);
                 if (content != null) {
-                    List<Video> vs = VideoTransform.transformRemoteVideoToLocalVideo(content.videos);
+                    final List<Video> vs = VideoTransform.transformRemoteVideoToLocalVideo(content.videos);
                     if (mType == REQ_FIRST || mType == REQ_REFRESH) {
                         mVideosAdapter.setList(vs);
                     } else {

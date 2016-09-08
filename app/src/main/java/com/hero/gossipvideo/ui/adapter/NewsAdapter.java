@@ -33,7 +33,7 @@ public class NewsAdapter extends BaseRecyclerViewAdapter<News> {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final News news = getList().get(position);
-        NewsHolder mHolder = (NewsHolder) holder;
+        final NewsHolder mHolder = (NewsHolder) holder;
 
         mHolder.mNewsSource.setText(news.category);
         mHolder.mNewsReadNum.setText(news.readNum+"阅读");

@@ -4,15 +4,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,8 +17,6 @@ import android.widget.TextView;
 import com.hero.gossipvideo.R;
 import com.hero.gossipvideo.ads.gdt.GDTAgent;
 import com.hero.gossipvideo.api.ApiManager;
-import com.hero.gossipvideo.content.PlayBean;
-import com.hero.gossipvideo.content.PlayUrl;
 import com.hero.gossipvideo.db.DownloadVideoDao;
 import com.hero.gossipvideo.db.HistoryVideoDao;
 import com.hero.gossipvideo.db.model.HistoryVideo;
@@ -30,13 +25,7 @@ import com.hero.gossipvideo.download.VideoDownloader;
 import com.hero.gossipvideo.player.PlayFragment;
 import com.hero.gossipvideo.store.DirHelper;
 import com.hero.gossipvideo.ui.view.ExVideoView;
-import com.ltc.lib.net.api.HttpResult;
-import com.ltc.lib.net.api.HttpWorker;
-import com.ltc.lib.net.api.RequestPrepare;
-import com.ltc.lib.net.param.Method;
-import com.ltc.lib.utils.JsonUtil;
 import com.ltc.lib.utils.Utils;
-import com.squareup.okhttp.internal.Util;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -64,7 +53,7 @@ public class PlayerActivity extends BaseActivity implements View.OnClickListener
     private ImageView mBatteryImg;
     private TextView mTimeTv;
 
-    BatteryReceiver mBatteryReceiver;
+    private BatteryReceiver mBatteryReceiver;
 
     public static void invoke(Context context, Video video) {
         Intent intent = new Intent(context, PlayerActivity.class);
@@ -126,12 +115,12 @@ public class PlayerActivity extends BaseActivity implements View.OnClickListener
 
     public File getVideoInLocal(Video video) {
 
-        File[] files = DirHelper.getVideoDownloadDir().listFiles();
+        final File[] files = DirHelper.getVideoDownloadDir().listFiles();
         if (files == null || files.length == 0) {
             return null;
         }
 
-        for (File f : files) {
+        for (final File f : files) {
             if (f.getName().indexOf(video.id) >= 0) {
                 return f;
             }
@@ -159,7 +148,7 @@ public class PlayerActivity extends BaseActivity implements View.OnClickListener
     private void startPlay(String url) {
         mPlayFragment.setVideoViewSize(0, 0);
 
-        HistoryVideo hs = new HistoryVideo(mVideo);
+        final HistoryVideo hs = new HistoryVideo(mVideo);
         hs.updateTime = System.currentTimeMillis();
         HistoryVideoDao.getInstance().saveOrUpdate(hs);
 
@@ -226,10 +215,9 @@ public class PlayerActivity extends BaseActivity implements View.OnClickListener
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
+            final String action = intent.getAction();
             if (Intent.ACTION_BATTERY_CHANGED.equals(action)) {
                 int level = intent.getIntExtra("level", 0);
-//                int scale = intent.getIntExtra("scale", 100);
                 if (level == 100) {
                     mBatteryImg.setImageResource(R.drawable.ic_battery5_1);
                 } else if (level > 80 && level < 100) {
@@ -256,7 +244,7 @@ public class PlayerActivity extends BaseActivity implements View.OnClickListener
         }
 
         mBatteryReceiver = new BatteryReceiver();
-        IntentFilter intentFilter = new IntentFilter();
+        final IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Intent.ACTION_BATTERY_CHANGED);
         intentFilter.addAction(Intent.ACTION_TIME_TICK);
         registerReceiver(mBatteryReceiver, intentFilter);

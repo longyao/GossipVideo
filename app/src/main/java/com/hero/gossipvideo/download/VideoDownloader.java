@@ -180,7 +180,7 @@ public class VideoDownloader {
 
     public File getVideoInLocal(Video video) {
 
-        File[] files = DirHelper.getVideoDownloadDir().listFiles();
+        final File[] files = DirHelper.getVideoDownloadDir().listFiles();
         if (files == null || files.length == 0) {
             return null;
         }

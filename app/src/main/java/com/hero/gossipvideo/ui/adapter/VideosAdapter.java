@@ -30,7 +30,7 @@ public class VideosAdapter extends BaseRecyclerViewAdapter<Video> {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final Video v = getList().get(position);
-        VideosHolder h = (VideosHolder) holder;
+        final VideosHolder h = (VideosHolder) holder;
         h.videoTitle.setText(v.videoTitle);
         h.watchCount.setText(mContext.getString(R.string.video_watch_count, v.watchCount));
         h.duration.setText(second2minute(Integer.parseInt(v.duration)));
@@ -38,10 +38,10 @@ public class VideosAdapter extends BaseRecyclerViewAdapter<Video> {
     }
 
     private String second2minute(int second) {
-        int m = second / 60;
-        int s = second - m*60;
-        String min = m > 0 ? (m >= 10 ? String.valueOf(m) : "0" + m) : "00";
-        String sec = s > 10 ? String.valueOf(s) : "0" + s;
+        final int m = second / 60;
+        final int s = second - m*60;
+        final String min = m > 0 ? (m >= 10 ? String.valueOf(m) : "0" + m) : "00";
+        final String sec = s > 10 ? String.valueOf(s) : "0" + s;
         return min + ":" + sec;
     }
 

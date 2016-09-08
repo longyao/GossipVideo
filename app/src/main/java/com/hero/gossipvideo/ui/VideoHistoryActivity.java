@@ -32,7 +32,6 @@ import java.util.List;
  */
 public class VideoHistoryActivity extends BaseActivity {
 
-    private Toolbar mToolbar;
     private TextView mTipsTv;
     private RecyclerView mRecyclerView;
     private VideosAdapter mVideoAdapter;
@@ -73,7 +72,7 @@ public class VideoHistoryActivity extends BaseActivity {
 
     private void initView() {
 
-        mToolbar = (Toolbar) findViewById(R.id.v_toolbar);
+        final Toolbar mToolbar = (Toolbar) findViewById(R.id.v_toolbar);
         mToolbar.setTitle(R.string.nv_video_history);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

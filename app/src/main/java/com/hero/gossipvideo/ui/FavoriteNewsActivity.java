@@ -30,7 +30,6 @@ import java.util.List;
  */
 public class FavoriteNewsActivity extends BaseActivity {
 
-    private Toolbar mToolbar;
     private TextView mTipsTv;
     private RecyclerView mRecyclerView;
     private NewsAdapter mNewsAdapter;
@@ -55,7 +54,7 @@ public class FavoriteNewsActivity extends BaseActivity {
 
     private void initView() {
 
-        mToolbar = (Toolbar) findViewById(R.id.v_toolbar);
+        final Toolbar mToolbar = (Toolbar) findViewById(R.id.v_toolbar);
         mToolbar.setTitle(R.string.nv_favorite);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

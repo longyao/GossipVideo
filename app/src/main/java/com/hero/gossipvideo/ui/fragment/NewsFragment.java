@@ -1,10 +1,7 @@
 package com.hero.gossipvideo.ui.fragment;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,11 +12,9 @@ import android.widget.TextView;
 
 import com.hero.gossipvideo.R;
 import com.hero.gossipvideo.api.ApiManager;
-import com.hero.gossipvideo.config.Constants;
 import com.hero.gossipvideo.content.NewsContent;
 import com.hero.gossipvideo.ui.adapter.NewsAdapter;
 import com.hero.gossipvideo.ui.view.DividerItemDecoration;
-import com.hero.gossipvideo.utils.PreUtils;
 import com.ltc.lib.net.api.HttpResult;
 import com.ltc.lib.utils.JsonUtil;
 import com.ltc.lib.utils.Utils;
@@ -135,7 +130,7 @@ public class NewsFragment extends BaseFragment implements SwipeRefreshLayout.OnR
 
             boolean isEmpty = true;
             if (result != null && result.isSuccess()) {
-                NewsContent content = JsonUtil.fromJson(result.data, NewsContent.class);
+                final NewsContent content = JsonUtil.fromJson(result.data, NewsContent.class);
                 if (content != null && content.data != null) {
                     mCurrentPage = content.data.page;
                     if (mType == REQ_FIRST || mType == REQ_REFRESH) {

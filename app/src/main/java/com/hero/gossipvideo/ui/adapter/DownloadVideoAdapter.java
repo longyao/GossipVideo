@@ -85,7 +85,7 @@ public class DownloadVideoAdapter extends BaseRecyclerViewAdapter<DownloadVideo>
         }
     }
 
-    public class VideosHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    private class VideosHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         SimpleDraweeView videoImg;
         TextView videoStatus;

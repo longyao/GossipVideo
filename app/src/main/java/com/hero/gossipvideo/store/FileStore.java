@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Created by Administrator on 2015/4/18.
  */
-public class FileStore<T> {
+ class FileStore<T> {
 
     protected void saveObjToFile(T obj, String fileName) {
         saveObjToFile(obj, new File(fileName));

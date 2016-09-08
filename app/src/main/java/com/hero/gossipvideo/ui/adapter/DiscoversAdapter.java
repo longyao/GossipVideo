@@ -33,7 +33,7 @@ public class DiscoversAdapter extends BaseRecyclerViewAdapter<DiscoverContent.It
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final DiscoverContent.Item item = getList().get(position);
-        NewsHolder mHolder = (NewsHolder) holder;
+        final NewsHolder mHolder = (NewsHolder) holder;
 
         mHolder.mDiscoverSource.setText(item.tagName);
         mHolder.mDiscoverDesc.setText(item.title);

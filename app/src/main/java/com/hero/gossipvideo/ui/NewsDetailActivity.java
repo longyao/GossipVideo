@@ -76,7 +76,7 @@ public class NewsDetailActivity extends BaseActivity {
     }
 
     private void getFromExtras() {
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         if (intent != null) {
             mNews = (News) intent.getSerializableExtra("news");
             mNews.updateTime = System.currentTimeMillis();

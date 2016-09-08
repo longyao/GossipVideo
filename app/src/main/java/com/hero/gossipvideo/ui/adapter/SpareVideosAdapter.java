@@ -35,19 +35,11 @@ public class SpareVideosAdapter extends BaseRecyclerViewAdapter<DiscoverContent.
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final DiscoverContent.Item item = getList().get(position);
-        VideosHolder h = (VideosHolder) holder;
+        final VideosHolder h = (VideosHolder) holder;
         h.videoTitle.setText(item.title);
         h.watchCount.setText(mContext.getString(R.string.video_watch_count, item.readNum));
         h.duration.setText("05:23");
         h.videoImg.setImageURI(Uri.parse(item.pic));
-    }
-
-    private String second2minute(int second) {
-        int m = second / 60;
-        int s = second - m*60;
-        String min = m > 0 ? (m >= 10 ? String.valueOf(m) : "0" + m) : "00";
-        String sec = s > 10 ? String.valueOf(s) : "0" + s;
-        return min + ":" + sec;
     }
 
     public class VideosHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

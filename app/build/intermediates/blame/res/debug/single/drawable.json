@@ -92,12 +92,12 @@
         "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_spinner_textfield_background_material.xml"
-    },
-    {
         "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable/scrubber_progress_horizontal_holo_dark.xml",
         "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/io.vov.vitamio/vitamio/5.0.1/res/drawable/scrubber_progress_horizontal_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
@@ -144,12 +144,12 @@
         "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable/tb_munion_item_selector.xml",
-        "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.um.update/update/1.0.3/res/drawable/tb_munion_item_selector.xml"
-    },
-    {
         "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
         "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable/tb_munion_item_selector.xml",
+        "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.um.update/update/1.0.3/res/drawable/tb_munion_item_selector.xml"
     },
     {
         "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",

@@ -92,12 +92,12 @@
         "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
         "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-mdpi/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/longtc/workaraAndroid/GossipVideo/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
