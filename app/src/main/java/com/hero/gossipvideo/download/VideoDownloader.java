@@ -166,10 +166,10 @@ public class VideoDownloader {
                 File saveFile = new File(DirHelper.getVideoDownloadDir(), mVideo.id + ".video");
                 DownloadPrepare prepare = DownloadPrepare.create(playUrl, saveFile, new MDownloadListener());
                 //是否要断点续传
-                File lf = getVideoInLocal(mVideo);
-                if (lf != null) {
+                final File file = getVideoInLocal(mVideo);
+                if (file != null) {
                     Range r = new Range();
-                    r.set(lf.length(), -1);
+                    r.set(file.length(), -1);
                     prepare.range = r;
                 }
                 mDownloadWorker.download(prepare);
