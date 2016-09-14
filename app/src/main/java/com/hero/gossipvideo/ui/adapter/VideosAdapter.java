@@ -3,6 +3,7 @@ package com.hero.gossipvideo.ui.adapter;
 import android.content.Context;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -29,12 +30,23 @@ public class VideosAdapter extends BaseRecyclerViewAdapter<Video> {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
         final Video v = getList().get(position);
         final VideosHolder h = (VideosHolder) holder;
         h.videoTitle.setText(v.videoTitle);
         h.watchCount.setText(mContext.getString(R.string.video_watch_count, v.watchCount));
-        h.duration.setText(second2minute(Integer.parseInt(v.duration)));
-        h.videoImg.setImageURI(Uri.parse(v.imgUrl));
+
+        final String d = v.duration;
+        if (!TextUtils.isEmpty(d)) {
+            h.duration.setText(second2minute(Integer.parseInt(d)));
+        } else {
+            h.duration.setText("");
+        }
+
+        final String url = v.imgUrl;
+        if (!TextUtils.isEmpty(url)) {
+            h.videoImg.setImageURI(Uri.parse(url));
+        }
     }
 
     private String second2minute(int second) {

@@ -39,7 +39,9 @@ public class SpareVideosAdapter extends BaseRecyclerViewAdapter<DiscoverContent.
         h.videoTitle.setText(item.title);
         h.watchCount.setText(mContext.getString(R.string.video_watch_count, item.readNum));
         h.duration.setText("05:23");
-        h.videoImg.setImageURI(Uri.parse(item.pic));
+        if (!TextUtils.isEmpty(item.pic)) {
+            h.videoImg.setImageURI(Uri.parse(item.pic));
+        }
     }
 
     public class VideosHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

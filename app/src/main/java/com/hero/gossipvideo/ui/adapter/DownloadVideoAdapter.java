@@ -3,6 +3,7 @@ package com.hero.gossipvideo.ui.adapter;
 import android.content.Context;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -66,9 +67,13 @@ public class DownloadVideoAdapter extends BaseRecyclerViewAdapter<DownloadVideo>
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
         VideosHolder vh = (VideosHolder) holder;
         final DownloadVideo v = mList.get(position);
-        vh.videoImg.setImageURI(Uri.parse(v.imgUrl));
+
+        if (!TextUtils.isEmpty(v.imgUrl)) {
+            vh.videoImg.setImageURI(Uri.parse(v.imgUrl));
+        }
 
         if (v.id.equals(mUpdateStatus.id)) {
             if (mUpdateStatus.finish) {
